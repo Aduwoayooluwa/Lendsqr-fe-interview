@@ -1,0 +1,92 @@
+@import "../../style/variables.scss";
+
+.sidebar-layout {
+    display: flex;
+    align-items: start
+}
+
+.sidebar-style {
+    width: 283px;
+    min-height: calc(100vh - 100px);
+    background-color: white;
+    margin-top: 100px;
+    padding: 10px 0;
+     box-shadow: 3px 0 5px -3px rgba(0, 0, 0, 0.1);
+     z-index: 100;
+      > * + * {
+    margin-top: 1.5rem;
+     }
+
+}
+
+.sidebar-children {
+    width: calc(100% - 283px);
+    min-height: 100vh
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    color: lighten($primary-blue, 20%);
+    text-decoration: none;
+     > * + * {
+     margin-left: 0.5rem;
+ }
+
+    &:hover{ color: $primary-blue;}
+}
+
+.sidebar-item-li {
+    padding: 15px 20px;
+   
+
+    &:hover {
+        border-left:3px solid #39CDCC;
+         background-color: lighten(#39CDCC, 40%);
+          color: $primary-blue;
+    }
+}
+
+.sidebar-ul {
+
+}
+
+// switch organization
+
+.ant-dropdown-link {
+  color: $primary-blue;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: none; 
+  padding: 5px 10px; 
+  border-radius: 4px;
+  padding: 15px 20px;
+
+  
+  &:hover, &:focus {
+    color: $primary-blue; 
+    background: lighten(#39CDCC, 40%);
+  }
+
+  .anticon-down {
+    margin-left: 5px;
+  }
+}
+
+.switch-org-briefcase {
+    margin-right: 0.5rem;
+}
+
+.dropdown-switch-org {
+    margin-left: 0.5rem;
+}
+
+.ant-dropdown-menu-item {
+  color: #000;
+  
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}

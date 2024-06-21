@@ -1,0 +1,77 @@
+{
+    "data": [
+    {
+        "organization": "LendSqr",
+        "username": "Adedeji",
+        "email": "adedeji@lendsqr.com",
+        "phone_number": "08078903721",
+        "date_joined": "May 15, 2020 10:00 AM",
+        "status": "inactive"
+    },
+    {
+        "organization": "Irroun",
+        "username": "Debby Ogana",
+        "email": "debby@irroun.com",
+        "phone_number": "08180789028",
+        "date_joined": "Apr 30, 2020 10:00 AM",
+        "status": "pending"
+    },
+    {
+        "organization": "Lendstar",
+        "username": "Grace Effiom",
+        "email": "grace@lendstar.com",
+        "phone_number": "07086708922",
+        "date_joined": "Apr 30, 2020 10:00 AM",
+        "status": "blacklisted"
+    },
+    {
+        "organization": "Lendsqr",
+        "username": "Tosin Dokunmu",
+        "email": "tosin@lendsqr.com",
+        "phone_number": "07003309226",
+        "date_joined": "Apr 10, 2020 10:00 AM",
+        "status": "pending"
+    },
+    {
+        "organization": "Lendstar",
+        "username": "Grace Effiom",
+        "email": "grace@lendstar.com",
+        "phone_number": "07086708922",
+        "date_joined": "Apr 30, 2020 10:00 AM",
+        "status": "active"
+    },
+    {
+        "organization": "Lendsqr",
+        "username": "Tosin Dokunmu",
+        "email": "tosin@lendsqr.com",
+        "phone_number": "08067809900",
+        "date_joined": "Apr 10, 2020 10:00 AM",
+        "status": "active"
+    },
+    {
+        "organization": "Lendstar",
+        "username": "Grace Effiom",
+        "email": "grace@lendstar.com",
+        "phone_number": "07086708922",
+        "date_joined": "Apr 30, 2020 10:00 AM",
+        "status": "blacklisted"
+    },
+    {
+        "organization": "Lendsqr",
+        "username": "Tosin Dokunmu",
+        "email": "tosin@lendsqr.com",
+        "phone_number": "08067809900",
+        "date_joined": "Apr 10, 2020 10:00 AM",
+        "status": "inactive"
+    },
+    {
+        "organization": "Lendstar",
+        "username": "Grace Effiom",
+        "email": "grace@lendstar.com",
+        "phone_number": "07086708922",
+        "date_joined": "Apr 30, 2020 10:00 AM",
+        "status": "inactive"
+    }
+]
+
+}
