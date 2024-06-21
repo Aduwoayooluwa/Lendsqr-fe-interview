@@ -1,0 +1,25 @@
+
+.filter-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 150;
+  position: absolute;
+  left: 10px;
+  top: 60px;
+
+  .ant-form-item {
+    margin-bottom: 16px;
+  }
+
+  .ant-btn {
+    margin-right: 8px;
+    
+  }
+
+  .btn-filter {
+    background-color: $primary-color;
+  }
+}
+

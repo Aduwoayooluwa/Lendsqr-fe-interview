@@ -1,0 +1,37 @@
+@import "../../style/variables.scss";
+
+
+.users-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-user {
+    width: calc(240px - 20px);
+    height: calc(160px - 20px);
+    font-size: 14px;
+    color: #545F7D;
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+     padding: 20px;
+     border-radius: 4px;
+     background-color: white;
+
+    display: flex;      
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+
+
+.card-title {
+    font-weight: 500;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.card-number {
+    color: $primary-blue;
+    font-size: 24px;
+    font-weight: 600;
+}

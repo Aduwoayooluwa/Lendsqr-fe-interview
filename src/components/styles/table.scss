@@ -1,0 +1,92 @@
+@import "../../style/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+// @import "~antd/dist/antd.css";
+
+
+
+@mixin work-sans() {
+  font-family: 'Work Sans', sans-serif;
+  font-optical-sizing: auto;
+}
+
+.table-component {
+    position: relative;
+}
+.table {
+     margin-top: 40px;
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+     position: relative;
+}
+
+.ant-table {
+   
+  font-family: "Work Sans", inherit;
+  .ant-table-container {
+    .ant-table-content {
+      table {
+        border-spacing: 0 10px; 
+
+        thead > tr > th {
+          background-color: white; 
+          color: #545F7D; 
+          font-size: 12px;
+          font-weight: 600;
+        }
+
+        tbody > tr > td {
+          background-color: #fff; 
+          border-bottom: 1px solid #e8e8e8; 
+          color: #545F7D;
+          font-size: 14px;
+        }
+
+        .ant-table-cell {
+          text-align: start;
+        }
+      }
+    }
+
+  }
+   *, *::before, *::after {
+    font-family: inherit;
+  }
+}
+
+.table-controls {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+
+    .ant-select {
+        .ant-select-selector {
+            height: 32px;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+
+// Custom tags for status
+.ant-tag-green {
+  background-color: #52c41a;
+}
+
+.ant-tag-volcano {
+  background-color: #ff7875;
+}
+
+.ant-tag-geekblue {
+  background-color: #2f54eb;
+}
+
+.filter-icon {
+   margin-left:10px;
+}
+
+.column-title {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}

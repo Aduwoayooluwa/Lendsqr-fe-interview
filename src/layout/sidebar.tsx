@@ -45,7 +45,7 @@ const SwitchOrgDropdown = () => {
   );
 
   return (
-      <Dropdown className="switch-org" overlay={menu}>
+      <Dropdown className="switch-org"  trigger={['click']} overlay={menu}>
           
           <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
               <img src={SwitchOrgIcon} className="switch-org-briefcase" alt="switch organization briefcase" />
@@ -104,7 +104,7 @@ export default function Sidebar({ children }: Readonly<{
                     <SidebarItem icon={LogoutIcon} name="Logout"/>
                 </ul>
 
-                <p style={{fontSize: "12px", color: "#213F7D", paddingLeft: "20px", marginTop:"3px"}}>v1.2.0</p>
+                <p style={{fontSize: "12px", color: "#213F7D", paddingLeft: "20px", marginTop:"12px"}}>v1.2.0</p>
             </div>
             <div className="sidebar-children">
                 {children}

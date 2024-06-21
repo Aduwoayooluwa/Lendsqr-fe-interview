@@ -21,7 +21,10 @@
 
 .sidebar-children {
     width: calc(100% - 283px);
-    min-height: 100vh
+    min-height: 100vh;
+    margin-top: 100px;
+    padding: 60px;
+    background: #FBFBFB;
 }
 
 .sidebar-item {
@@ -70,6 +73,10 @@
   .anticon-down {
     margin-left: 5px;
   }
+}
+
+.switch-org {
+    cursor: pointer;
 }
 
 .switch-org-briefcase {

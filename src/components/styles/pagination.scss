@@ -1,0 +1,24 @@
+.custom-pagination {
+    padding: 20px 10px;
+    
+    .ant-pagination {
+        color: lighten(#545F7D, 30%); 
+
+    
+        .ant-pagination-item a {
+            color: lighten(#545F7D, 30%) !important; 
+        }
+
+        .ant-pagination-item-active a {
+            border: none !important; 
+            color: darken(#545F7D, 10%) !important;
+            background-color: transparent !important;
+        }
+
+        .ant-pagination-item-active {
+            border: none !important; 
+        }
+
+        
+    }
+}

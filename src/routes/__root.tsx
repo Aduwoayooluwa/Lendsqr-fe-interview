@@ -1,5 +1,5 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router'
-import { TanStackRouterDevtools } from '@tanstack/router-devtools'
+//import { TanStackRouterDevtools } from '@tanstack/router-devtools'
 import Header from '../layout/header'
 import "../style/app.scss"
 import Sidebar from '../layout/sidebar'
@@ -14,7 +14,7 @@ export const Route = createRootRoute({
       <Sidebar>
 
         <Outlet />
-        <TanStackRouterDevtools />
+        {/* <TanStackRouterDevtools /> */}
       </Sidebar>
     </div>
   ),
