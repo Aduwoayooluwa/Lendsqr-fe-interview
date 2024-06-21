@@ -103,6 +103,8 @@ export default function Sidebar({ children }: Readonly<{
                 <ul className="sidebar-ul">
                     <SidebarItem icon={LogoutIcon} name="Logout"/>
                 </ul>
+
+                <p style={{fontSize: "12px", color: "#213F7D", paddingLeft: "20px", marginTop:"3px"}}>v1.2.0</p>
             </div>
             <div className="sidebar-children">
                 {children}
