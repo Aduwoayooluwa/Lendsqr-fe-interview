@@ -33,5 +33,33 @@ input, button, select, textarea, table {
 }
 
 .ant-dropdown-menu-item{
-  font-family: inherit;
+  font-family: "Work Sans", sans-serif;;
+
 }
+
+.ant-btn {
+  font-family: "Work Sans", sans-serif;
+}
+
+.ant-table-thead .ant-table-cell  {
+ font-family: "Work Sans", sans-serif;
+}
+
+.ant-table-tbody .ant-table-cell {
+   font-family: "Work Sans", sans-serif;
+}
+
+.ant-form-item-has-error .ant-input,
+.ant-form-item-has-error .ant-select-selector {
+  font-family: "Work Sans", sans-serif;
+}
+
+.ant-form-item, .ant-input, .ant-select, .ant-date, .ant-form-item-label > label, .ant-picker-input, .ant-list-item  {
+  font-family: "Work Sans", sans-serif;
+}
+
+.ant-spin-dot-item {
+    background-color: $primary-color;
+    color: $primary-color
+}
+

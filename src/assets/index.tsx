@@ -44,4 +44,5 @@ export { default as ProfileImage } from "./imgs/profile_image.png";
 
 // Sign-in Image { svg }
 export { default as SignInImage } from "./svgs/pablo-sign-in.svg";
-export { default as SystemMessagesIcon} from "./svgs/system_messages.svg"
+export { default as SystemMessagesIcon} from "./svgs/system_messages.svg";
+export { default as UserDetailsIcon } from "./svgs/user_details.svg";

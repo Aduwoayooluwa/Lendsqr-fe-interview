@@ -5,6 +5,8 @@
    left: 10px;
   top: 60px;
   background: white;
+
+  
 }
 
 .filter-form {
@@ -14,9 +16,11 @@
   border-radius: 4px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   z-index:200;
+  
 
   .ant-form-item {
     margin-bottom: 16px;
+    
     
     &:hover, &:focus {
       border: $primary-color !important;
@@ -24,7 +28,7 @@
   }
 
   .ant-input,
-.ant-select-selector {
+.ant-select-selector, .ant-picker-input, .ant-select, .ant-picker {
   // border-color: $pri !important;
 
   &:hover {

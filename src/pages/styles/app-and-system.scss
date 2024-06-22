@@ -1,0 +1,28 @@
+.app-system-details {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-top: 40px;
+
+    .ant-list-item {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+   
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .ant-list-item-meta-title {
+        a {
+            color: $primary-blue;
+        }
+        color: $primary-blue;
+    }
+
+    .ant-list-item-meta-description {
+        color: $primary-blue-secondary;
+    }
+}

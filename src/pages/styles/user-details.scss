@@ -1,0 +1,175 @@
+.user-details {
+    .previous-icon-el {
+    display: flex;
+    align-items: center
+    }
+    .header-action {
+        padding: 40px 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .text-title {
+            font-size: 24px;
+            color: $primary-blue;
+            font-weight: 500;
+        }
+
+        .action-btn {
+            display: flex;
+            align-items: center;
+             > * + * {
+                margin-left: 1rem;
+            }
+
+            .activate-btn, .blacklist-btn {
+                font-size: 14px;
+                font-weight: 600
+            }
+
+            .activate-btn {
+                color: $primary-color;
+                border: 1px solid $primary-color
+            }
+
+            .blacklist-btn {
+                color: #E4033B;
+                border: 1px solid #E4033B
+            }
+        }
+
+
+    }
+
+    .align-spin {
+        width: "100%";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .tabs-details {
+    display: flex;
+    position: relative; 
+
+    button {
+        flex-grow: 1;
+        text-align: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        padding: 10px 15px;
+
+        &:hover {
+            background-color: #f0f0f0;
+        }
+
+        &.active {
+            color: $primary-color
+        }
+    }
+
+    .underline {
+        position: absolute;
+        bottom: 0;
+        height: 3px;
+        background-color: $primary-color; 
+    }
+}
+
+    
+
+    .details-card {
+        height: 210px;
+        padding: 40px 40px 0 40px;
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        position: relative;
+
+        .tab-menu-switch {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+        }
+    .basic-details-card {
+        display: flex;
+        align-items: center;
+        height: 50%;
+        > * + * {
+            margin-left: 2rem;
+            }
+    .user-icon-profile {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        background: lighten($primary-blue, 55%);
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .border-divider {
+        height: 80px;
+        background-color: $primary-blue-secondary;
+    }
+    .user-info {
+        display: flex;
+        align-items: center;
+
+
+        .user-details {
+            .user-name {
+                font-size: 22px;
+                font-weight: 500;
+                color: $primary-blue
+            }
+
+            .user-id {
+                font-size: 14px;
+                color: $primary-blue-secondary;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .user-tier {
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+        .star {
+            margin-top: 5px;
+            color: #ffc107;
+            font-size: 16px;
+        }
+        p {
+            font-size: 14px;
+            color: $primary-blue;
+            font-weight: 500;
+        }
+    }
+
+    .user-balance {
+        text-align: right;
+        .balance-user {
+            color: $primary-blue;
+            font-size: 22px;
+            font-weight: 500;
+
+        }
+
+        .bank-details {
+            font-size: 12px;
+            color: $primary-blue;
+            margin-top: 5px;
+        }
+    }
+}
+
+
+    }
+}
+

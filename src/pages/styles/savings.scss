@@ -1,0 +1,29 @@
+.savings-details {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+    
+    .ant-table-thead > tr > th {
+        background-color: #f0f0f5;
+        color: $primary-blue;
+    }
+
+    .savings-status {
+        padding: 2px 5px;
+        border-radius: 4px;
+
+        &.active {
+            color: #4CAF50;
+        }
+
+        &.pending {
+            color: #FFC107;
+        }
+
+        &.closed {
+            color: #F44336;
+        }
+    }
+}

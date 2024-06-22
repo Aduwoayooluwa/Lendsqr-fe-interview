@@ -1,0 +1,32 @@
+.document-details {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-top: 40px;
+
+    
+    .ant-table-thead > tr > th {
+        background-color: #f0f0f5;
+        color: $primary-blue;
+    }
+
+    .ant-btn-link {
+        color: $primary-blue-secondary;
+        &:hover {
+            color: darken($primary-blue-secondary, 30%);
+        }
+    }
+
+    span.active {
+        color: $primary-color
+    }
+
+    span.inactive {
+        color: red;
+    }
+
+    span.pending {
+        color: orange;
+    }
+}

@@ -2,6 +2,8 @@ import { Tag, Dropdown, Menu } from 'antd';
 import { ActivateUser, BlackListUserIcon, FilterIcon, ViewDetailsIcon } from '../assets';
 import { MoreOutlined } from '@ant-design/icons';
 import "../components/styles/table.scss"
+import { Link } from '@tanstack/react-router';
+import toast from 'react-hot-toast';
 
 export const Icon = ({ icon }: {icon: string}) => {
     return <img src={icon} style={{marginRight: "5px", marginTop: "4px"}} alt="icon" />
@@ -10,12 +12,18 @@ export const Icon = ({ icon }: {icon: string}) => {
 const menu = (
     <Menu className="menu">
         <Menu.Item key="1" className='menu-item'>
-          <Icon icon={ViewDetailsIcon} />  <span style={{marginBottom: "10px"}}>View Details</span>
+          <Link to="/users-details">
+                <Icon icon={ViewDetailsIcon} />  <span style={{ marginBottom: "10px" }}>View Details</span>
+            </Link>
         </Menu.Item>
-        <Menu.Item key="2" className='menu-item'>
+        <Menu.Item onClick={() => {
+            toast.success("User Blacklisted")
+        }} key="2" className='menu-item'>
           <Icon icon={BlackListUserIcon} />  Blacklist User
         </Menu.Item>
-        <Menu.Item key="3" className='menu-item'>
+        <Menu.Item key="3" onClick={() => {
+            toast.error("Failed to activate user!")
+        }} className='menu-item'>
            <Icon icon={ActivateUser} /> Activate User
         </Menu.Item>
     </Menu>
@@ -49,6 +57,7 @@ export const columns = (setIsFilterIconClicked: React.Dispatch<React.SetStateAct
         ),
         dataIndex: 'organization',
         key: 'organization',
+        render: (text: string) => <p className="table-data">{text}</p>
     },
     {
         title: () => (

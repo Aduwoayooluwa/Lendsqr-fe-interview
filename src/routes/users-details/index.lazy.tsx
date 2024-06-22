@@ -1,13 +1,16 @@
 import { createLazyFileRoute } from '@tanstack/react-router'
+import UserInfo from '../../pages/users/user-details'
 
 export const Route = createLazyFileRoute('/users-details/')({
-  component: () => <div>Hello /users/!</div>
+  component: () => <div><UserDetails /></div>
 })
 
 
-export const UserDetails = () => {
+const UserDetails = () => {
   return (
-    <div></div>
+    <div>
+      <UserInfo />
+    </div>
 
   )
 }
