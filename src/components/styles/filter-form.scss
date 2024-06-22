@@ -1,17 +1,43 @@
+.filter-form-animation {
+  z-index: 300;
+  width: 270px;
+   position: absolute;
+   left: 10px;
+  top: 60px;
+  background: white;
+}
 
 .filter-form {
-  background-color: #fff;
+ // background-color: #fff;
   padding: 20px;
+  width: 100%;
   border-radius: 4px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  z-index: 150;
-  position: absolute;
-  left: 10px;
-  top: 60px;
+  z-index:200;
 
   .ant-form-item {
     margin-bottom: 16px;
+    
+    &:hover, &:focus {
+      border: $primary-color !important;
+    }
   }
+
+  .ant-input,
+.ant-select-selector {
+  // border-color: $pri !important;
+
+  &:hover {
+    border-color: $primary-color !important;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $primary-color !important;
+    box-shadow: 0 0 0 2px rgba(255, 71, 87, 0.2) !important;
+  }
+}
+
 
   .ant-btn {
     margin-right: 8px;
@@ -20,6 +46,21 @@
 
   .btn-filter {
     background-color: $primary-color;
+    &:hover, &:focus {
+      background-color: darken($primary-color, 20%) !important;
+    }
+  }
+
+  .reset-btn {
+    color: #545F7D;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid #545F7D;
+
+    &:hover {
+      border: 2px solid darken(#545F7D, 20%) !important;
+      color: darken(#545F7D, 20%) !important;
+    }
   }
 }
 

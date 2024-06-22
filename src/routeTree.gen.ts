@@ -17,11 +17,8 @@ import { Route as rootRoute } from './routes/__root'
 // Create Virtual Routes
 
 const IndexLazyImport = createFileRoute('/')()
-const UsersIndexLazyImport = createFileRoute('/users/')()
+const UsersDetailsIndexLazyImport = createFileRoute('/users-details/')()
 const AuthIndexLazyImport = createFileRoute('/auth/')()
-const UsersUserDetailsIndexLazyImport = createFileRoute(
-  '/users/user-details/',
-)()
 
 // Create/Update Routes
 
@@ -30,22 +27,17 @@ const IndexLazyRoute = IndexLazyImport.update({
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
 
-const UsersIndexLazyRoute = UsersIndexLazyImport.update({
-  path: '/users/',
+const UsersDetailsIndexLazyRoute = UsersDetailsIndexLazyImport.update({
+  path: '/users-details/',
   getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/users/index.lazy').then((d) => d.Route))
+} as any).lazy(() =>
+  import('./routes/users-details/index.lazy').then((d) => d.Route),
+)
 
 const AuthIndexLazyRoute = AuthIndexLazyImport.update({
   path: '/auth/',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/auth/index.lazy').then((d) => d.Route))
-
-const UsersUserDetailsIndexLazyRoute = UsersUserDetailsIndexLazyImport.update({
-  path: '/users/user-details/',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() =>
-  import('./routes/users/user-details/index.lazy').then((d) => d.Route),
-)
 
 // Populate the FileRoutesByPath interface
 
@@ -65,18 +57,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthIndexLazyImport
       parentRoute: typeof rootRoute
     }
-    '/users/': {
-      id: '/users/'
-      path: '/users'
-      fullPath: '/users'
-      preLoaderRoute: typeof UsersIndexLazyImport
-      parentRoute: typeof rootRoute
-    }
-    '/users/user-details/': {
-      id: '/users/user-details/'
-      path: '/users/user-details'
-      fullPath: '/users/user-details'
-      preLoaderRoute: typeof UsersUserDetailsIndexLazyImport
+    '/users-details/': {
+      id: '/users-details/'
+      path: '/users-details'
+      fullPath: '/users-details'
+      preLoaderRoute: typeof UsersDetailsIndexLazyImport
       parentRoute: typeof rootRoute
     }
   }
@@ -87,8 +72,7 @@ declare module '@tanstack/react-router' {
 export const routeTree = rootRoute.addChildren({
   IndexLazyRoute,
   AuthIndexLazyRoute,
-  UsersIndexLazyRoute,
-  UsersUserDetailsIndexLazyRoute,
+  UsersDetailsIndexLazyRoute,
 })
 
 /* prettier-ignore-end */
@@ -101,8 +85,7 @@ export const routeTree = rootRoute.addChildren({
       "children": [
         "/",
         "/auth/",
-        "/users/",
-        "/users/user-details/"
+        "/users-details/"
       ]
     },
     "/": {
@@ -111,11 +94,8 @@ export const routeTree = rootRoute.addChildren({
     "/auth/": {
       "filePath": "auth/index.lazy.tsx"
     },
-    "/users/": {
-      "filePath": "users/index.lazy.tsx"
-    },
-    "/users/user-details/": {
-      "filePath": "users/user-details/index.lazy.tsx"
+    "/users-details/": {
+      "filePath": "users-details/index.lazy.tsx"
     }
   }
 }

@@ -7,8 +7,7 @@ import { useEffect, useState } from 'react';
 import { SkeletonTable } from './skeleton';
 import { columns } from '../helper/table-colums';
 import { FilterForm } from './filter-form';
-import { dropdownAnimation } from '../helper/animation-options';
-import { AnimatePresence, motion } from "framer-motion"
+
 
 type UserDataProps = {
     organization: string
@@ -78,27 +77,7 @@ const Table = () => {
 
     return (
         <div className="table-component">
-             <AnimatePresence>
-            {
-                isFilterIconClicked ? (
-                   
-                        <motion.div
-                            initial="hidden"
-                            animate="visible"
-                            exit="hidden"
-                            variants={dropdownAnimation}
-                            key="filter-form"
-                        >
-                            <FilterForm onSubmit={handleFilterTable} />
-                        </motion.div>
-                    
-
-
-                ) : null
-                
-            }
-            </AnimatePresence>
-
+            <FilterForm onSubmit={handleFilterTable} isVisible={ isFilterIconClicked } />
             <Tabl className='table customPagination' columns={columns(setIsFilterIconClicked)}
                 dataSource={users!}
                 // dataSource={users!.slice((currentPage - 1) * pageSize, currentPage * pageSize)}

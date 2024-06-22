@@ -1,18 +1,22 @@
 import { Tag, Dropdown, Menu } from 'antd';
-import { FilterIcon } from '../assets';
+import { ActivateUser, BlackListUserIcon, FilterIcon, ViewDetailsIcon } from '../assets';
 import { MoreOutlined } from '@ant-design/icons';
+import "../components/styles/table.scss"
 
+export const Icon = ({ icon }: {icon: string}) => {
+    return <img src={icon} style={{marginRight: "5px", marginTop: "4px"}} alt="icon" />
+}
 
 const menu = (
-    <Menu>
-        <Menu.Item key="1">
-            View Details
+    <Menu className="menu">
+        <Menu.Item key="1" className='menu-item'>
+          <Icon icon={ViewDetailsIcon} />  <span style={{marginBottom: "10px"}}>View Details</span>
         </Menu.Item>
-        <Menu.Item key="2">
-            Blacklist User
+        <Menu.Item key="2" className='menu-item'>
+          <Icon icon={BlackListUserIcon} />  Blacklist User
         </Menu.Item>
-        <Menu.Item key="3">
-            Activate User
+        <Menu.Item key="3" className='menu-item'>
+           <Icon icon={ActivateUser} /> Activate User
         </Menu.Item>
     </Menu>
 );

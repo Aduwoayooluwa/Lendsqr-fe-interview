@@ -83,10 +83,16 @@
 
 .filter-icon {
    margin-left:10px;
+   cursor: "ponter"
 }
 
 .column-title {
     font-size: 12px;
     display: flex;
     align-items: center;
+}
+
+.menu {
+    width: 180px;
+    padding: 10px
 }
