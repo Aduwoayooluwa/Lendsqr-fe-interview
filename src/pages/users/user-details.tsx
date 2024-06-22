@@ -13,6 +13,7 @@ import Loans, { loans_data } from "./components/loans"
 import Savings, { savings } from "./components/savings"
 import AppSystem, { appSystemDetails } from "./components/app-and-system"
 import { Link } from "@tanstack/react-router"
+import TransitionWrapper from "../../template"
 
 
 interface TabsProps {
@@ -120,9 +121,9 @@ export default function UserInfo() {
             </header>
 
             <main>
-                <BasicDetailsCard manageCurrentTab={manageCurrentTab} setManageCurrentTab={setManageCurrentTab} details={userDetails!} isLoading={isFetchingDetails} />
-
-
+                <TransitionWrapper>
+                    <BasicDetailsCard manageCurrentTab={manageCurrentTab} setManageCurrentTab={setManageCurrentTab} details={userDetails!} isLoading={isFetchingDetails} />
+                </TransitionWrapper>
                 <div>
                     {isFetchingDetails ? (<div className="align-spin">
                         <Spin size="large" />

@@ -3,6 +3,7 @@ import Table from "../../components/table";
 import { userStats } from "../../helper/users-card";
 import "../styles/user.scss";
 import { useState, useEffect } from "react"
+import TransitionWrapper from "../../template";
 
 
 type CardProps = {
@@ -48,21 +49,24 @@ export default function Users() {
     return (
         <div>
 
-            <ul className="users-stats">
-                {
-                    userStats.map((user) => (
-                        <UserStatCard icon={user.icon} title={user.title}
-                            key={user.id}
-                            number={user.count}    
-                        />
-                    ))
-                }
-            </ul>
+            <TransitionWrapper >
+                <ul className="users-stats">
+                     {
+                        userStats.map((user) => (
+                            <UserStatCard icon={user.icon} title={user.title}
+                                key={user.id}
+                                number={user.count}    
+                            />
+                        ))
+                    }
+                    
+                </ul>
+            </TransitionWrapper>
 
             {/* table  */}
-            <div>
+            <TransitionWrapper>
                 <Table />
-            </div>
+            </TransitionWrapper>
         </div>
     )
 }
