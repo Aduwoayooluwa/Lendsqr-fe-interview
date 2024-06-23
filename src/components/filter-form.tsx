@@ -61,7 +61,13 @@ export const FilterForm: React.FC<FilterFormProps> = ({ onSubmit, isVisible }) =
                                 <Button type="primary" className="btn-filter" htmlType="submit">
                                     Filter
                                 </Button>
-                                <Button htmlType="button" className="reset-btn" onClick={() => form.resetFields()}>
+                                <Button htmlType="button" className="reset-btn" onClick={() => {
+                                    
+                                  //  form.resetFields()
+                                    form.setFieldsValue({
+                                        username: '', email: '', organization: '', date: '', phoneNumber: '', status: ''
+                                    })
+                                }}>
                                     Reset
                                 </Button>
                             </Form.Item>
