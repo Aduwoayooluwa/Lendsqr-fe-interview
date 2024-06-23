@@ -10,11 +10,11 @@ interface GeneralDetailsComponentProps {
 
 const GeneralDetailsComponent: React.FC<GeneralDetailsComponentProps> = ({ details }) => {
     return (
-        <div className="general-details">
+        <div data-testid="general_details" className="general-details">
             {/* Personal Information */}
-            <div className="section">
+            <div data-testid="section-pi" className="section">
                 <h2>Personal Information</h2>
-                <div className="content">
+                <div data-testid="content-pi" className="content">
                     <div>
                         <strong>Full Name</strong>
                         <p> {details?.personal_information.full_name}</p>
@@ -57,9 +57,9 @@ const GeneralDetailsComponent: React.FC<GeneralDetailsComponentProps> = ({ detai
 
             <Divider />
             {/* Education and Employment */}
-            <div className="section">
+            <div data-testid="section" className="section">
                 <h2>Education and Employment</h2>
-                <div className="content">
+                <div data-testid="content-ed" className="content">
                     <div>
                         <strong>Level of Education:</strong>
                         <p>{details?.education_and_employment.level_of_education}</p>
@@ -94,9 +94,9 @@ const GeneralDetailsComponent: React.FC<GeneralDetailsComponentProps> = ({ detai
             <Divider />
 
             {/* Socials */}
-            <div className="section">
+            <div data-testid="section" className="section">
                 <h2>Socials</h2>
-                <div className="content">
+                <div data-testid="content-so" className="content">
                     <div>
                         <strong>Twitter:</strong>
                         <p>{details?.socials.twitter}</p>
@@ -113,11 +113,11 @@ const GeneralDetailsComponent: React.FC<GeneralDetailsComponentProps> = ({ detai
             </div>
 
             <Divider />
-            
+
             {/* Guarantor */}
-            <div className="section">
+            <div data-testid="section" className="section">
                 <h2>Guarantor</h2>
-                <div className="content">
+                <div gata-testid="gu" className="content">
                     <div>
                         <strong>Full Name:</strong>
                         <p>{details?.guarantor.full_name}</p>

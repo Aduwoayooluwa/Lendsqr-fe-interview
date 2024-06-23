@@ -2,8 +2,16 @@
 
 .sidebar-layout {
     display: flex;
-    align-items: start
+    align-items: start;
+
+    .sidebar-fixed {
+      // position: fixed;
+      // overflow-y: scroll;
+    }
+    
 }
+
+
 
 .sidebar-style {
     width: 283px;
@@ -13,6 +21,7 @@
     padding: 10px 0;
      box-shadow: 3px 0 5px -3px rgba(0, 0, 0, 0.1);
      z-index: 100;
+     overflow-y: auto;
       > * + * {
     margin-top: 1.5rem;
      }
@@ -25,6 +34,9 @@
     margin-top: 100px;
     padding: 60px;
     background: #FBFBFB;
+    // position: fixed;
+    // overflow-y: scroll;
+    // margin-left: 283px;
 }
 
 .sidebar-item {

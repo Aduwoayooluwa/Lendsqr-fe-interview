@@ -68,7 +68,7 @@ const Table = () => {
     }
 
     if (isFetchingUsers) return (
-        <div className="table">
+        <div data-testid="loader" className="table">
             <SkeletonTable columns={columns(setIsFilterIconClicked)!} rows={10} />
         </div>
     )

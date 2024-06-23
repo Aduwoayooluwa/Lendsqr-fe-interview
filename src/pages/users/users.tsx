@@ -12,10 +12,8 @@ type CardProps = {
     number: string | number
 }
 
-function UserStatCard({ icon, title, number }: CardProps) {
-
+export function UserStatCard({ icon, title, number }: CardProps) {
     const [isLoading, setIsLoading] = useState(true)
-
    
     useEffect(() => {
          // the loading timer for the skeleton loader
@@ -37,8 +35,10 @@ function UserStatCard({ icon, title, number }: CardProps) {
             <p className="card-title">{title}</p>
             {
                 isLoading ? (
-                    <Skeleton.Input />           
-                ) : <p className="card-number">{ number.toLocaleString() }</p>
+                    <div data-testid="skeleton-loader">
+                        <Skeleton.Input  />  
+                    </div>         
+                ) : <p className="card-number" data-testid="number-stat">{ number.toLocaleString() }</p>
             }
             
         </div>
@@ -59,7 +59,7 @@ export default function Users() {
                             />
                         ))
                     }
-                    
+
                 </ul>
             </TransitionWrapper>
 

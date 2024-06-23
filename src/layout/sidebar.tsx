@@ -60,6 +60,7 @@ export default function Sidebar({ children }: Readonly<{
 }>) {
     return (
         <div className="sidebar-layout">
+            <div className="sidebar-fixed">
             <div className="sidebar-style">
                 <ul>
                     <SwitchOrgDropdown />
@@ -105,7 +106,8 @@ export default function Sidebar({ children }: Readonly<{
                 </ul>
 
                 <p style={{fontSize: "12px", color: "#213F7D", paddingLeft: "20px", marginTop:"12px"}}>v1.2.0</p>
-            </div>
+                </div>
+                 </div>
             <div className="sidebar-children">
                 {children}
             </div>

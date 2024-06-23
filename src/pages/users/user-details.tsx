@@ -53,11 +53,11 @@ const Tabs: React.FC<TabsProps> = ({ manageCurrentTab, setManageCurrentTab }) =>
     );
 };
 
-const BasicDetailsCard: React.FC<{details: UserResponse, manageCurrentTab: string, isLoading: boolean, setManageCurrentTab: React.Dispatch<React.SetStateAction<string>>}> = ({ details, setManageCurrentTab, manageCurrentTab, isLoading }) => {
+export const BasicDetailsCard: React.FC<{details: UserResponse, manageCurrentTab: string, isLoading: boolean, setManageCurrentTab: React.Dispatch<React.SetStateAction<string>>}> = ({ details, setManageCurrentTab, manageCurrentTab, isLoading }) => {
     // const { name, id, tier, stars, balance, bank } = details.data;
 
     return (
-        <div className="details-card">
+        <div data-testid="basic-details" className="details-card">
         <div className="basic-details-card">
             <div className="user-icon-profile">
                 <img src={UserDetailsIcon} alt="icon" />
@@ -71,8 +71,9 @@ const BasicDetailsCard: React.FC<{details: UserResponse, manageCurrentTab: strin
             </div>
 
             <Divider type="vertical" className="border-divider" />
-            <div className="user-tier">
+            <div className="user-tier" data-testid="user-tier">
                 <p>User&apos;s tier</p>
+
                 <p className="star">{isLoading ? (<Skeleton.Input />) : '★'.repeat(details?.data.stars)}</p>
             </div>
 
