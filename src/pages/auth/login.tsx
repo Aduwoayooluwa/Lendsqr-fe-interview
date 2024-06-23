@@ -1,5 +1,6 @@
 import { Form, Input } from "antd";
 import { SignInImage } from "../../assets";
+import "../styles/auth.scss";
 
 export default function Login() {
     return (
