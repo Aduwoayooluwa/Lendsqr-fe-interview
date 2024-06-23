@@ -6,36 +6,7 @@ import { fetchData } from '../../config/api';
 
 window.fetch = vi.fn();
 
-
-const mockData = [
-    {
-      organization: 'Tech Co',
-      username: 'jdoe',
-      email: 'jdoe@example.com',
-      phone_number: '1234567890',
-      date_joined: '2021-01-01',
-      status: 'active'
-    },
-];
   
-beforeAll(() => {
-  window.fetch = vi.fn();
-  
-   Object.defineProperty(window, 'matchMedia', {
-     writable: true,
-     value: vi.fn().mockImplementation((query) => ({
-       matches: false,
-       media: query,
-       onchange: null,
-      //  addListener: vi.fn(), 
-      //  removeListener: vi.fn(), 
-       addEventListener: vi.fn(),
-       removeEventListener: vi.fn(),
-       dispatchEvent: vi.fn(),
-     })),
-   });
- })
- 
 describe('Table ', () => {
   beforeEach(() => {
     vi.resetAllMocks();
@@ -81,20 +52,24 @@ describe('Table ', () => {
       .toThrow('Network failure');
   });
 
-    it('renders the table and displays data after loading',  () => {
-    //const { getAllByTestId } = render(<Table />);
-    // 
+    it('renders the table and displays data after loading',  async () => {
+   // const { getAllByTestId } = render(<Table />);
+    
 
-    // Check for the data presence
+   // Check for the data presence
     // expect(screen.getByText('Tech Co')).toBeInTheDocument();
     // expect(screen.getByText('jdoe@example.com')).toBeInTheDocument();
 
-    // check for custom components like tags
+   // check for custom components like tags
     // const statusTag = screen.getByText('ACTIVE');
     // expect(statusTag).toBeInTheDocument();
     // expect(statusTag).toHaveClass('ant-tag-green'); 
 
-    // check for actions or links
-    //expect(screen.getByText('View Details').closest('a')).toHaveAttribute('href', '/users-details');
+   // check for actions or links
+   // expect(screen.getByText('View Details').closest('a')).toHaveAttribute('href', '/users-details');
   });
+
+  it("Check if the filter form is opening", () => {
+    //render(<Table />)
+  })
 });

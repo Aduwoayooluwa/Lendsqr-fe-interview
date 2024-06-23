@@ -11,6 +11,7 @@ if (!globalThis.fetch) {
 }
 
 beforeAll(() => {
+
     Object.defineProperty(window, 'matchMedia', {
         writable: true,
         value: vi.fn().mockImplementation(query => ({
@@ -24,6 +25,7 @@ beforeAll(() => {
             dispatchEvent: vi.fn(),
         })),
     });
+    vi.resetModules();
 });
 
 afterEach(() => {
