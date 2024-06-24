@@ -51,8 +51,12 @@
   }
 }
 
-@media (min-width: $breakpoint-lg) {
+@media (min-width: $breakpoint-sm) {
   .mobile-sidebar {
+    display: none;
+    
+  }
+  .mobile-nav-menu {
     display: none;
   }
 }
