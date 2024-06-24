@@ -4,6 +4,7 @@ import { businesses, customers, settings } from "../helper/sidebar-option"
 import "./style/sidebar.scss"
 import { DashboardIcon, DropdownSidebarIcon, LogoutIcon, SwitchOrgIcon } from "../assets"
 import { Menu, Dropdown, Divider } from 'antd';
+import { useLayoutNavigation } from "../hooks/use-layout";
 
 
 
@@ -17,6 +18,7 @@ const DownOutlined = () => {
         <img className="dropdown-switch-org" src={DropdownSidebarIcon} alt="switch org" />
     )
 }
+
 
 const SidebarItem = ({ icon, name }: SidebarItemProps) => {
     return (
@@ -58,6 +60,10 @@ const SwitchOrgDropdown = () => {
 export default function Sidebar({ children }: Readonly<{
     children: React.ReactNode
 }>) {
+    const { setIsNavBarOpen } = useLayoutNavigation() 
+
+    const toggleNavigationClose = () => setIsNavBarOpen(false);
+
     return (
         <div className="sidebar-layout">
             <div className="sidebar-fixed">
@@ -108,7 +114,7 @@ export default function Sidebar({ children }: Readonly<{
                 <p style={{fontSize: "12px", color: "#213F7D", paddingLeft: "20px", marginTop:"12px"}}>v1.2.0</p>
                 </div>
                  </div>
-            <div className="sidebar-children">
+            <div className="sidebar-children" onClick={toggleNavigationClose}>
                 {children}
             </div>
 

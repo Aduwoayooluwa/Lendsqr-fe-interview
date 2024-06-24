@@ -5,6 +5,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; 
 }
 .card-user {
     width: calc(240px - 20px);
@@ -35,3 +39,36 @@
     font-size: 24px;
     font-weight: 600;
 }
+
+@media (max-width: $breakpoint-sm) {
+    .users-stats {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+    .card-user {
+        width: calc(100% - 30px); 
+        height: auto;
+        font-size: 12px;
+        padding: 15px; 
+        margin: 10px 0; 
+
+        .card-title {
+            font-size: 12px;
+            margin: 10px 0; 
+        }
+
+        .card-number {
+            font-size: 18px;
+        }
+    }
+
+ }
+
+
+
+ @media (min-width: 1300px) {
+    .users-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+ }

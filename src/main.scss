@@ -63,3 +63,11 @@ input, button, select, textarea, table {
     color: $primary-color
 }
 
+
+
+ @media (max-width: $breakpoint-lg) {
+   .ant-table {
+    width: 100%;
+    overflow: auto;
+   }
+  }

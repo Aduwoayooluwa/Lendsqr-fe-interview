@@ -4,6 +4,9 @@ import { Logo } from "../components/logo";
 import "./style/header.scss"
 import { Link } from "@tanstack/react-router";
 import { Menu, Dropdown, Avatar } from 'antd';
+import { Rotate as Hamburger } from 'hamburger-react'
+import { useLayoutNavigation } from "../hooks/use-layout";
+import MobileSidebar from "./mobile-sidebar";
 
 const UserProfileDropdown = () => {
   const menu = (
@@ -24,7 +27,7 @@ const UserProfileDropdown = () => {
     <Dropdown overlay={menu} trigger={['click']}>
       <a className="ant-d-user-dropdown" onClick={e => e.preventDefault()}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Avatar src={ProfileImage} size={48}  style={{ marginRight: '8px' }} />
+          <Avatar src={ProfileImage} size={48} style={{ marginRight: '8px' }} />
           <p className="p-text-name">Adedeji</p>  <img src={DropdownProfileIcon} alt="dropdown" style={{ marginLeft: '8px' }} />
         </div>
       </a>
@@ -32,24 +35,32 @@ const UserProfileDropdown = () => {
   );
 };
 export default function Header() {
-    return (
-        <div className="header">
-            <div className="header-container">
-                <Logo />
-                <Search />
+  const { isNavBarOpen, setIsNavBarOpen } = useLayoutNavigation();
 
-                <div className="header-right-items">
-
-                    <Link to={"/"}  className="p-docs">Docs</Link>
-
-                    <img src={NotificationBellIcon} className="notification-bell" alt="notification bell" />
-
-                    <div className="display-name">
-                        <UserProfileDropdown />
-                        
-                    </div>
-                </div>
-            </div>
+  return (
+    <div className="header">
+      <div className="header-container">
+        <div className="mobile-nav-menu">
+          <Hamburger color="#213F7D" toggled={isNavBarOpen} toggle={setIsNavBarOpen} />
         </div>
-    )
+        <Logo />
+        <div className="search">
+          <Search />
+        </div>
+
+        <div className="header-right-items">
+
+          <Link to={"/"} className="p-docs">Docs</Link>
+
+          <img src={NotificationBellIcon} className="notification-bell" alt="notification bell" />
+
+          <div className="display-name">
+            <UserProfileDropdown />
+
+          </div>
+        </div>
+      </div>
+      <MobileSidebar />
+    </div>
+  )
 }

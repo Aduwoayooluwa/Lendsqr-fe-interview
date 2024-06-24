@@ -56,3 +56,17 @@ margin-left: 0.5rem;
 .ant-d-user-dropdown {
     cursor: pointer;
 }
+
+@media (max-width: $breakpoint-md) {
+    .p-docs, .display-name {
+        display: none;
+    }
+    
+}
+
+@media (max-width: $breakpoint-sm) {
+   .search {
+       display: none;
+   }
+   
+}

@@ -22,3 +22,10 @@
         
     }
 }
+
+@media (max-width: $breakpoint-sm) {
+    .custom-pagination {
+        width: 100%;
+        overflow: auto;
+    }
+}
