@@ -4,6 +4,7 @@ import { Toaster } from "react-hot-toast";
 import Header from "./layout/header";
 import Sidebar from "./layout/sidebar";
 import NavigationProvider from "./context/navigation-context";
+import AuthProvider from "./context/auth-context";
 
 export const Wrapper = () => {
 
@@ -15,19 +16,21 @@ export const Wrapper = () => {
     if (location === "/") return (<Outlet />)
 
     return (
-        <NavigationProvider>
-            <div>
-                <header>
-                    <Header />
-                </header>
+        <AuthProvider>
+            <NavigationProvider>
                 <div>
-                    <Sidebar>
-                        <Outlet />
-                    </Sidebar>
-                    <TanStackRouterDevtools />
-                    <Toaster />
+                    <header>
+                        <Header />
+                    </header>
+                    <div>
+                        <Sidebar>
+                            <Outlet />
+                        </Sidebar>
+                        <TanStackRouterDevtools />
+                        <Toaster />
+                    </div>
                 </div>
-            </div>
-        </NavigationProvider>
+            </NavigationProvider>
+        </AuthProvider>
     )
 }

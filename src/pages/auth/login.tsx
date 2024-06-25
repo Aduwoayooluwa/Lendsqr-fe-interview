@@ -1,23 +1,58 @@
-import { Form, Input } from "antd";
+import { Button, Form, Input } from "antd";
 import { SignInImage } from "../../assets";
 import "../styles/auth.scss";
-
+import { useAuth } from "../../hooks/use-auth";
+import { saveLocalStorage } from "../../helper/storage";
+import { useNavigate } from "@tanstack/react-router"
+import { useState } from "react";
 export default function Login() {
+
+    const { setIsUserLoggedIn, setUserData } = useAuth();
+
+    const [isLoadingAuth, setIsLoadingAuth] = useState(false);
+
+    const navigate = useNavigate()
+
+    const onSubmit = (values: {
+        email: string
+        password: string
+    }) => {
+
+        setIsLoadingAuth(true)
+
+        setTimeout(() => {
+            setUserData(values)
+            saveLocalStorage("userData", JSON.stringify(values))
+            setIsUserLoggedIn(true)
+            saveLocalStorage("isUserLoggedIn", "true")
+            navigate({
+                to: "/user"
+            });
+            setIsLoadingAuth(false)
+        }, 2000)
+
+    }
     return (
-        <div>
-            <div>
-                <img src={SignInImage} alt="sign in image" />
+        <div className="auth-layout">
+            <div className="auth-image">
+                <img src={SignInImage} alt="sign in img" />
             </div>
 
-            <div>
-                <Form>
-                    <Form.Item label="" name="" className="input-email">
-                        <Input placeholder="Email"  />
+            <div className="auth-form">
+                <Form className="auth-form-form" onFinish={onSubmit}>
+                    <Form.Item label="" name="email" rules={[{ required: true }]}>
+                        <Input placeholder="Email" className="input-email" />
                     </Form.Item>
 
-                    <Form.Item name="password" label="" >
-                        <Input placeholder="password" type="password" className="input-password"/>
+                    <Form.Item name="password" label="" rules={[{ required: true }]}>
+                        <Input placeholder="password" type="password" className="input-password" />
                     </Form.Item>
+
+                    <p className="forgot-pwd-text">
+                        Forgot Password ?
+                    </p>
+
+                    <Button loading={isLoadingAuth} className="auth-btn" htmlType="submit" type="primary">Login</Button>
                 </Form>
             </div>
         </div>

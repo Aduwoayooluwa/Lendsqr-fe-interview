@@ -5,6 +5,7 @@ import "./style/sidebar.scss"
 import { DashboardIcon, DropdownSidebarIcon, LogoutIcon, SwitchOrgIcon } from "../assets"
 import { Menu, Dropdown, Divider } from 'antd';
 import { useLayoutNavigation } from "../hooks/use-layout";
+import { useAuth } from "../hooks/use-auth";
 
 
 
@@ -61,7 +62,8 @@ export default function Sidebar({ children }: Readonly<{
     children: React.ReactNode
 }>) {
     const { setIsNavBarOpen } = useLayoutNavigation() 
-
+    const { onLogout } = useAuth();
+    
     const toggleNavigationClose = () => setIsNavBarOpen(false);
 
     return (
@@ -107,7 +109,7 @@ export default function Sidebar({ children }: Readonly<{
 
                 <Divider  />
 
-                <ul className="sidebar-ul">
+                <ul className="sidebar-ul" onClick={onLogout}>
                     <SidebarItem icon={LogoutIcon} name="Logout"/>
                 </ul>
 
