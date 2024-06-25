@@ -20,14 +20,14 @@ const UserProfileDropdown = () => {
         Change Theme
       </Menu.Item>
       <Menu.Item key="1">
-        <Link to="https://lendsqr.freshdesk.com/support/home" target="_blank" rel={'noreferrer'}>
+        <a href="https://lendsqr.freshdesk.com/support/home">
           Help
-        </Link>
+        </a>
       </Menu.Item>
       <Menu.Item key="2" onClick={onLogout}>
-        <Link to="https://blog.lendsqr.com/">
+        <a href="https://blog.lendsqr.com/" >
           Blog
-        </Link>
+        </a>
       </Menu.Item>
     </Menu>
   );
