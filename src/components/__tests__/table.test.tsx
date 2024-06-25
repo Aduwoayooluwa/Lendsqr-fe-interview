@@ -1,5 +1,5 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { fetchData } from '../../config/api';
+import { describe, it, beforeEach, vi } from 'vitest';
+// import { fetchData } from '../../config/api';
 
 
 window.fetch = vi.fn();
