@@ -23,6 +23,21 @@
 
 }
 
+.ant-btn-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+
+    &:hover, &:focus {
+        background-color: darken($primary-color, 5%);
+        border-color: darken($primary-color, 5%);
+    }
+}
+
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+    border-color: $primary-color;
+}
+
+
 .input-field, .search-input {
   border: none;
   flex-grow: 1;

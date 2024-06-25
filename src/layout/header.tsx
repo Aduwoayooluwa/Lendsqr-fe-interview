@@ -9,6 +9,7 @@ import { useLayoutNavigation } from "../hooks/use-layout";
 import MobileSidebar from "./mobile-sidebar";
 import { useAuth } from "../hooks/use-auth";
 import toast from "react-hot-toast";
+import { SearchComponent } from "../components/search-tab";
 
 const UserProfileDropdown = () => {
   const { onLogout } = useAuth();
@@ -54,7 +55,7 @@ export default function Header() {
         </div>
         <Logo />
         <div className="search">
-          <Search />
+          <SearchComponent />
         </div>
 
         <div className="header-right-items">
