@@ -39,7 +39,9 @@ export default function Login() {
             </div>
 
             <div className="auth-form">
+                <p>Login into your Account</p>
                 <Form className="auth-form-form" onFinish={onSubmit}>
+                    
                     <Form.Item label="" name="email" rules={[{ required: true }]}>
                         <Input placeholder="Email" className="input-email" />
                     </Form.Item>

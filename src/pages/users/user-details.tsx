@@ -103,7 +103,7 @@ export default function UserInfo() {
 
             {/* header  */}
             <header>
-                <Link to="/" style={{textDecoration: "none"}}>
+                <Link to="/user" style={{textDecoration: "none"}}>
                     <div className="previous-icon-el">
                         {/* back to users table page */}
                         <img src={BackToUsersIcon} alt="back icon" />
