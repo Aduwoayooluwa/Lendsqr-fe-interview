@@ -18,7 +18,7 @@ export const Wrapper = () => {
     return (
         <AuthProvider>
             <NavigationProvider>
-                <div>
+                <div className="" style={{position: "relative"}}>
                     <header>
                         <Header />
                     </header>

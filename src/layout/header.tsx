@@ -1,5 +1,5 @@
 import { DropdownProfileIcon, NotificationBellIcon, ProfileImage } from "../assets";
-import { Search } from "../components/input";
+import {  Search } from "../components/input";
 import { Logo } from "../components/logo";
 import "./style/header.scss"
 import { Link } from "@tanstack/react-router";
@@ -7,18 +7,27 @@ import { Menu, Dropdown, Avatar } from 'antd';
 import { Rotate as Hamburger } from 'hamburger-react'
 import { useLayoutNavigation } from "../hooks/use-layout";
 import MobileSidebar from "./mobile-sidebar";
+import { useAuth } from "../hooks/use-auth";
+import toast from "react-hot-toast";
 
 const UserProfileDropdown = () => {
+  const { onLogout } = useAuth();
   const menu = (
     <Menu>
-      <Menu.Item key="0">
+      <Menu.Item key="0" onClick={() => {
+        toast.success("Abeg use this theme!!!")
+      }}> 
         Change Theme
       </Menu.Item>
       <Menu.Item key="1">
-        Help
+        <Link to="https://lendsqr.freshdesk.com/support/home" target="_blank" rel={'noreferrer'}>
+          Help
+        </Link>
       </Menu.Item>
-      <Menu.Item key="2">
-        Log Out
+      <Menu.Item key="2" onClick={onLogout}>
+        <Link to="https://blog.lendsqr.com/">
+          Blog
+        </Link>
       </Menu.Item>
     </Menu>
   );

@@ -22,7 +22,7 @@ export function useAuth() {
         setUserData(null)
         setIsUserLoggedIn(false)
         localStorage.clear();
-        window.location.href("/")
+        window.location.assign("/")
     }
 
     return {
