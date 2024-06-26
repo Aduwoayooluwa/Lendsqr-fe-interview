@@ -24,7 +24,7 @@ const DownOutlined = () => {
 const SidebarItem = ({ icon, name }: SidebarItemProps) => {
     return (
         <li className="sidebar-item-li">
-            <Link to="/" className="sidebar-item">
+            <Link to="/user" className="sidebar-item">
                 <img src={icon} alt={`${name} icon`} />
                 <p>{name}</p>
             </Link>
@@ -63,7 +63,7 @@ export default function Sidebar({ children }: Readonly<{
 }>) {
     const { setIsNavBarOpen } = useLayoutNavigation() 
     const { onLogout } = useAuth();
-    
+
     const toggleNavigationClose = () => setIsNavBarOpen(false);
 
     return (

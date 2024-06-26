@@ -72,7 +72,7 @@ const SidebarSection: React.FC<SidebarSectionProps> = ({ title, items }) => {
       <motion.div layout className="grid" variants={listItemVariants}>
         {items.map(item => (
           <motion.div key={item.id} layout whileHover={{ scale: 1.1 }}>
-            <Link to="/" className="grid-item">
+            <Link to="/user" className="grid-item">
               <img src={item.icon} alt={`${item.name} icon`} />
               <span>{item.name}</span>
             </Link>
