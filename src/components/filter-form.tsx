@@ -16,8 +16,6 @@ export const FilterForm: React.FC<FilterFormProps> = ({ onSubmit, isVisible, onR
 
     const [form] = Form.useForm();
 
-    
-
     const handleFinish = (values: Filters) => {
         onSubmit(values);
     };
