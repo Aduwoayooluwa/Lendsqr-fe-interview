@@ -36,3 +36,15 @@
         }
     }
 }
+
+@media (max-width: $breakpoint-sm) {
+    .bank-details-card {
+            .bank-details-content {
+                .details {
+                     display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ grid-gap: 20px;
+                }
+            }
+    }
+}

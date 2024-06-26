@@ -2,6 +2,7 @@ import { Link, useNavigate } from "@tanstack/react-router";
 import { useState } from 'react';
 import { AutoComplete, Input } from 'antd';
 import "./styles/input.scss"
+
 type SearchItem = {
   name: string;
   path: string;

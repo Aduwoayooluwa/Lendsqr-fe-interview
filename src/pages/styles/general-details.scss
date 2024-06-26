@@ -51,7 +51,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     padding: 20px; 
-    overflow: hidden;
+    overflow-x: auto;
  p {
    margin: 5px 0;
    line-height: 1.5;

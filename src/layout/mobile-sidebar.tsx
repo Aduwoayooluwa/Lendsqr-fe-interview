@@ -29,7 +29,7 @@ const listItemVariants = {
 
 const MobileSidebar: React.FC = () => {
   const { isNavBarOpen } = useLayoutNavigation();
-
+  const { onLogout } = useAuth();
 
   return (
     <LayoutGroup>
@@ -41,15 +41,20 @@ const MobileSidebar: React.FC = () => {
         transition={{ type: "spring", stiffness: 260, damping: 20 }}
         layoutId='1'
       >
-       
+
         <AnimatePresence>
           {isNavBarOpen && (
             <motion.div layout className="sidebar-content">
-              <SidebarSection title="Dashboard" items={[{id: 'dashboard', name: "Dashboard", icon: DashboardIcon}]} />
+              <SidebarSection title="Dashboard" items={[{ id: 'dashboard', name: "Dashboard", icon: DashboardIcon }]} />
               <SidebarSection title="Customers" items={customers} />
               <SidebarSection title="Businesses" items={businesses} />
               <SidebarSection title="Settings" items={settings} />
-              <SidebarSection title="Logout" items={[{id: 'logout', name: "Logout", icon: LogoutIcon}]} />
+              <motion.div key={1234} layout whileHover={{ scale: 1.1 }}>
+                <Link to="/" onClick={onLogout} className="grid-item">
+                  <img src={LogoutIcon} alt={`logout  icon`} />
+                  <span>{"Logout"}</span>
+                </Link>
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -59,7 +64,7 @@ const MobileSidebar: React.FC = () => {
 }
 
 const SidebarSection: React.FC<SidebarSectionProps> = ({ title, items }) => {
-  const { onLogout } = useAuth();
+
 
   return (
     <motion.div layout className="sidebar-section">
@@ -74,13 +79,8 @@ const SidebarSection: React.FC<SidebarSectionProps> = ({ title, items }) => {
           </motion.div>
         ))}
 
-        <motion.div key={1234} layout whileHover={{ scale: 1.1 }}>
-          <Link to="/" onClick={onLogout} className="grid-item">
-            <img src={LogoutIcon} alt={`logout  icon`} />
-            <span>{"Logout"}</span>
-          </Link>
-        </motion.div>
       </motion.div>
+
     </motion.div>
   )
 }
