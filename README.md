@@ -20,6 +20,6 @@ Before you begin, ensure you have the following installed:
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://your-repository-url.git
-cd your-project-directory
+git clone https://github.com/Aduwoayooluwa/Lendsqr-fe-interview
+cd Lendsqr-fe-interview
 npm install
