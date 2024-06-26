@@ -11,6 +11,7 @@ type AuthContextProps = {
     userData: {
         email: string,
         password: string
+        username?: string
     } | null
     setIsUserLoggedIn: Dispatch<SetStateAction<boolean>>
     setUserData: Dispatch<SetStateAction<userDataProps | null>>

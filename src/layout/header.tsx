@@ -11,7 +11,7 @@ import toast from "react-hot-toast";
 import { SearchComponent } from "../components/search-tab";
 
 const UserProfileDropdown = () => {
-  const { onLogout } = useAuth();
+  const { onLogout, userData } = useAuth();
   const menu = (
     <Menu>
       <Menu.Item key="0" onClick={() => {
@@ -37,7 +37,7 @@ const UserProfileDropdown = () => {
       <a className="ant-d-user-dropdown" onClick={e => e.preventDefault()}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <Avatar src={ProfileImage} size={48} style={{ marginRight: '8px' }} />
-          <p className="p-text-name">Adedeji</p>  <img src={DropdownProfileIcon} alt="dropdown" style={{ marginLeft: '8px' }} />
+          <p className="p-text-name">{ userData!.username}</p>  <img src={DropdownProfileIcon} alt="dropdown" style={{ marginLeft: '8px' }} />
         </div>
       </a>
     </Dropdown>
@@ -45,6 +45,7 @@ const UserProfileDropdown = () => {
 };
 export default function Header() {
   const { isNavBarOpen, setIsNavBarOpen } = useLayoutNavigation();
+  
 
   return (
     <div className="header">

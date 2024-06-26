@@ -7,6 +7,7 @@ import { useNavigate } from "@tanstack/react-router"
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { loginContainerVariants } from "../../helper/animation-options";
+import { getUserameFromEmail } from "../../helper/get-user-details";
 export default function Login() {
 
     const { setIsUserLoggedIn, setUserData } = useAuth();
@@ -19,19 +20,20 @@ export default function Login() {
         email: string
         password: string
     }) => {
-
+        const username = getUserameFromEmail(values.email)
+        const userValues = {...values, username}
         setIsLoadingAuth(true)
 
         setTimeout(() => {
-            setUserData(values)
-            saveLocalStorage("userData", JSON.stringify(values))
+            setUserData(userValues)
+            saveLocalStorage("userData", JSON.stringify(userValues))
             setIsUserLoggedIn(true)
             saveLocalStorage("isUserLoggedIn", "true")
             navigate({
                 to: "/user"
             });
             setIsLoadingAuth(false)
-        }, 2000)
+        }, 2000)        
 
     }
     return (
