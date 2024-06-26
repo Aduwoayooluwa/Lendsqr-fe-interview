@@ -7,14 +7,26 @@
 
 
     .auth-form {
-        background-color: white  ;
-         .logo-icon-auth {
+        background-color: white;
+
+        ul {
+            margin: 20px 0;
+            color: $primary-blue;
+            font-size: 16px;
+            list-style: none;
+            text-decoration: none;
+
+        }
+
+        .logo-icon-auth {
             display: none;
+
             img {
                 display: none;
 
             }
-         }
+        }
+
         .auth-text {
             color: $primary-blue;
             align-items: start;
@@ -22,24 +34,31 @@
             flex-direction: column;
             width: 100%;
             margin-bottom: 40px;
+
             h2 {
                 font-size: 40px;
             }
 
             p {
-                font-weight: 400; 
+                font-weight: 400;
                 font-size: 20px;
                 margin-top: 5px;
             }
         }
-       
+
     }
-     .ant-input {
-     &:focus, :hover, :active {
-        border: 1px solid $primary-color;
-     }
+
+    .ant-input {
+
+        &:focus,
+        :hover,
+        :active {
+            border: 1px solid $primary-color;
+        }
     }
-    .auth-form, .auth-image {
+
+    .auth-form,
+    .auth-image {
         width: 50%;
         justify-content: center;
         align-items: center;
@@ -47,7 +66,9 @@
         padding: 0 60px;
         flex-direction: column;
         height: 100%;
-        .input-email, .input-password {
+
+        .input-email,
+        .input-password {
             height: 50px;
         }
 
@@ -55,60 +76,80 @@
             width: 100%;
             background-color: $primary-color;
             height: 50px;
-            &:hover, :focus {
+
+            &:hover,
+            :focus {
                 background-color: darken($primary-color, 10%);
             }
         }
     }
+
     .auth-form-form {
         width: 100%;
         flex-direction: column;
+
         .forgot-pwd-text {
             font-weight: 600;
             margin: 20px 0;
             color: $primary-color;
             font-size: 12px;
             text-transform: uppercase;
+            align-items: start;
+            text-align: start
         }
     }
 
 }
 
- @media (max-width: $breakpoint-sm) {
-   .auth-layout {
-     .auth-image {
-     display: none;
- }
- .auth-form {
-     width: 100%;
-     .logo-icon-auth {
-        margin-bottom: 10px;
-        img {
-            display: block;
-            width: 35px;
-            height: 35px;
+@media (max-width: $breakpoint-sm) {
+    .auth-layout {
+        .auth-image {
+            display: none;
         }
-     }
-     .auth-text {
-        margin-bottom: 20px;
-h2 {
-    font-size: 28px;
-}
-p {
-    font-weight: 400; 
-    font-size: 16px;
-    margin-top: 5px;
-}
-     }
-     p {
-        text-align: center;
-        margin-bottom: 30px;
-        font-weight: 600;
-        color: $primary-blue;
-        font-size: 18px;
-        display: block
-     }
 
- }
-   }
- }
+        .auth-form {
+            width: 100%;
+
+            ul {
+                margin: 10px 0;
+                color: $primary-blue;
+                font-size: 12px;
+
+            }
+
+            .logo-icon-auth {
+                margin-bottom: 10px;
+
+                img {
+                    display: block;
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+
+            .auth-text {
+                margin-bottom: 20px;
+
+                h2 {
+                    font-size: 28px;
+                }
+
+                p {
+                    font-weight: 400;
+                    font-size: 16px;
+                    margin-top: 5px;
+                }
+            }
+
+            p {
+                text-align: center;
+                margin-bottom: 30px;
+                font-weight: 600;
+                color: $primary-blue;
+                font-size: 18px;
+                display: block
+            }
+
+        }
+    }
+}

@@ -66,9 +66,17 @@ export default function Login() {
                         <Input placeholder="Password" type="password" className="input-password" />
                     </Form.Item>
 
+                    <ul  className="">
+    <li>Note: use any email and password to login. (i.e do wetin dey your mind!)</li>
+</ul>
+
                     <p className="forgot-pwd-text">
                         Forgot Password ?
                     </p>
+
+                    
+                    
+                    
 
                     <Button loading={isLoadingAuth} className="auth-btn" htmlType="submit" type="primary">Login</Button>
                 </Form>
