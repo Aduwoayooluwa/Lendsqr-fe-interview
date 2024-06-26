@@ -8,9 +8,30 @@
 
     .auth-form {
         background-color: white  ;
-        p {
+         .logo-icon-auth {
             display: none;
-        }  
+            img {
+                display: none;
+
+            }
+         }
+        .auth-text {
+            color: $primary-blue;
+            align-items: start;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 40px;
+            h2 {
+                font-size: 40px;
+            }
+
+            p {
+                font-weight: 400; 
+                font-size: 20px;
+                margin-top: 5px;
+            }
+        }
        
     }
      .ant-input {
@@ -60,6 +81,25 @@
  }
  .auth-form {
      width: 100%;
+     .logo-icon-auth {
+        margin-bottom: 10px;
+        img {
+            display: block;
+            width: 35px;
+            height: 35px;
+        }
+     }
+     .auth-text {
+        margin-bottom: 20px;
+h2 {
+    font-size: 28px;
+}
+p {
+    font-weight: 400; 
+    font-size: 16px;
+    margin-top: 5px;
+}
+     }
      p {
         text-align: center;
         margin-bottom: 30px;

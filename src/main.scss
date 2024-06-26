@@ -1,6 +1,10 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+@mixin sen {
+  font-family: "Sen", sans-serif;
+  font-optical-sizing: auto;
+}
 
 
 @mixin work-sans() {
@@ -63,6 +67,9 @@ input, button, select, textarea, table {
     color: $primary-color
 }
 
+.login-font {
+  font-family: "Sen", sans-serif;
+}
 
 
  @media (max-width: $breakpoint-lg) {
