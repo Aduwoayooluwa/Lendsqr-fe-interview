@@ -29,6 +29,12 @@ const UserProfileDropdown = () => {
           Blog
         </a>
       </Menu.Item>
+
+      <Menu.Item key="2" onClick={onLogout}>
+  <a href="https://blog.lendsqr.com/" >
+    Blog
+  </a>
+</Menu.Item>
     </Menu>
   );
 
@@ -37,7 +43,7 @@ const UserProfileDropdown = () => {
       <a className="ant-d-user-dropdown" onClick={e => e.preventDefault()}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <Avatar src={ProfileImage} size={48} style={{ marginRight: '8px' }} />
-          <p className="p-text-name">{ userData!.username}</p>  <img src={DropdownProfileIcon} alt="dropdown" style={{ marginLeft: '8px' }} />
+          <p className="p-text-name">{ userData?.username}</p>  <img src={DropdownProfileIcon} alt="dropdown" style={{ marginLeft: '8px' }} />
         </div>
       </a>
     </Dropdown>
