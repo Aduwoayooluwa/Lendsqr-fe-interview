@@ -1,8 +1,7 @@
 import { DropdownProfileIcon, NotificationBellIcon, ProfileImage } from "../assets";
-// import {  Search } from "../components/input";
 import { Logo } from "../components/logo";
 import "./style/header.scss"
-import { Link } from "@tanstack/react-router";
+
 import { Menu, Dropdown, Avatar } from 'antd';
 import { Rotate as Hamburger } from 'hamburger-react'
 import { useLayoutNavigation } from "../hooks/use-layout";
@@ -60,7 +59,7 @@ export default function Header() {
 
         <div className="header-right-items">
 
-          <Link to={"/"} className="p-docs">Docs</Link>
+          <a href={"https://www.youtube.com/@Lendsqr?themeRefresh=1"} className="p-docs">Docs</a>
 
           <img src={NotificationBellIcon} className="notification-bell" alt="notification bell" />
 
