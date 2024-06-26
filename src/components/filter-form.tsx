@@ -2,20 +2,23 @@ import React from 'react';
 import { Form, Input, Button, DatePicker, Select } from 'antd';
 import './styles/filter-form.scss';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Filters } from '../types/filter-form.types';
 
 const { Option } = Select;
 
 interface FilterFormProps {
-    onSubmit: (values: unknown) => void;
+    onSubmit: (values: Filters) => void;
     isVisible: boolean;
-    // onReset: () => void;
+     onReset: () => void;
 }
 
-export const FilterForm: React.FC<FilterFormProps> = ({ onSubmit, isVisible }) => {
+export const FilterForm: React.FC<FilterFormProps> = ({ onSubmit, isVisible, onReset }) => {
 
     const [form] = Form.useForm();
 
-    const handleFinish = (values: unknown) => {
+    
+
+    const handleFinish = (values: Filters) => {
         onSubmit(values);
     };
 
@@ -62,8 +65,8 @@ export const FilterForm: React.FC<FilterFormProps> = ({ onSubmit, isVisible }) =
                                     Filter
                                 </Button>
                                 <Button htmlType="button" className="reset-btn" onClick={() => {
-                                    
-                                  //  form.resetFields()
+                                    //  form.resetFields()
+                                    onReset();
                                     form.setFieldsValue({
                                         username: '', email: '', organization: '', date: '', phoneNumber: '', status: ''
                                     })
