@@ -24,16 +24,14 @@ const UserProfileDropdown = () => {
           Help
         </a>
       </Menu.Item>
-      <Menu.Item key="2" onClick={onLogout}>
+      <Menu.Item key="2">
         <a href="https://blog.lendsqr.com/" >
           Blog
         </a>
       </Menu.Item>
 
       <Menu.Item key="2" onClick={onLogout}>
-  <a href="https://blog.lendsqr.com/" >
-    Blog
-  </a>
+    Logout
 </Menu.Item>
     </Menu>
   );

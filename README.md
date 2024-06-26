@@ -13,7 +13,7 @@ This project is a dashboard application designed as part of the interview proces
 
 Before you begin, ensure you have the following installed:
 - Node.js (LTS version recommended)
-- npm or yarn
+- npm 
 
 ## Installation
 
