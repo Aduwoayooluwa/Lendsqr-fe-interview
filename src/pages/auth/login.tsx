@@ -33,7 +33,8 @@ export default function Login() {
                 to: "/user"
             });
             setIsLoadingAuth(false)
-        }, 2000)        
+        }, 2000)   
+        window.location.reload()     
 
     }
     return (
