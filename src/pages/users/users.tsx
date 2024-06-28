@@ -16,10 +16,12 @@ export function UserStatCard({ icon, title, number }: CardProps) {
     const [isLoading, setIsLoading] = useState(true)
    
     useEffect(() => {
+        window.location.reload()
          // the loading timer for the skeleton loader
         const loadingTimer = setTimeout(() => {
             setIsLoading(false)
         }, 2000)
+
 
         return () => clearTimeout(loadingTimer)
     }, [isLoading])

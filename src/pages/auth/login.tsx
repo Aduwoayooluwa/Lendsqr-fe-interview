@@ -34,7 +34,7 @@ export default function Login() {
             });
             setIsLoadingAuth(false)
         }, 2000)   
-        window.location.reload()     
+             
 
     }
     return (
