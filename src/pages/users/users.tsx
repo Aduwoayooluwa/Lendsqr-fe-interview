@@ -4,6 +4,7 @@ import { userStats } from "../../helper/users-card";
 import "../styles/user.scss";
 import { useState, useEffect } from "react"
 import TransitionWrapper from "../../template";
+import toast from "react-hot-toast";
 
 
 type CardProps = {
@@ -16,15 +17,20 @@ export function UserStatCard({ icon, title, number }: CardProps) {
     const [isLoading, setIsLoading] = useState(true)
    
     useEffect(() => {
-        window.location.reload()
+       
          // the loading timer for the skeleton loader
         const loadingTimer = setTimeout(() => {
             setIsLoading(false)
+        
         }, 2000)
 
 
         return () => clearTimeout(loadingTimer)
     }, [isLoading])
+
+    useEffect(() => {
+        toast("If page is not scrolling, Kindly refresh")
+    }, [])
 
 
     return (
